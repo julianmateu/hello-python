@@ -40,7 +40,7 @@ run:
 
 .PHONY: init-repo-pipenv
 init-repo-pipenv:
-	pipenv --python $$(cat .python-version)
+	pipenv --python $(shell cat .python-version)
 	pipenv install -r requirements.txt
 	pipenv install --dev -r requirements-dev.txt
 
